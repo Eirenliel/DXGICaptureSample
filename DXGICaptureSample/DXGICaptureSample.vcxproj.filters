@@ -29,10 +29,10 @@
     <ClCompile Include="stdafx.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DXGICaptureSample.cpp">
+    <ClCompile Include="DXGIManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="DXGIManager.cpp">
+    <ClCompile Include="ScreenCaptureBridge.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
