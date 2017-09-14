@@ -10,7 +10,7 @@ int _tmain(int argc, _TCHAR* argv[])
 {
 	printf("Screen capture bridge\n");
 	if (argc < 3) {
-		printf("Program arguments: <file name> <monitor 1|2|0>\n");
+		printf("Program arguments: <file name> <monitor 1|2|0>\nUse monitor 0 for full desktop");
 		return -1;
 	}
 

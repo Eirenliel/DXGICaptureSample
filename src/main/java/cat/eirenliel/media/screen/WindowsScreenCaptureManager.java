@@ -23,9 +23,10 @@ public class WindowsScreenCaptureManager extends ScreenCaptureManager {
 	private MappedByteBuffer memory;
 	private Process process;
 	
-	public WindowsScreenCaptureManager(File targetFile) {
+	protected WindowsScreenCaptureManager(File targetFile) {
 		if(OperatingSystem.getCurrentPlatform() != OperatingSystem.WINDOWS)
-			throw new UnsupportedHardwareException("Only windows platform is supported by this implimentation");
+			throw new UnsupportedHardwareException("Operating system " + OperatingSystem.getCurrentPlatform() + " is not supported by this implimentation");
+		targetFile.deleteOnExit();
 	}
 
 	@Override
@@ -47,6 +48,7 @@ public class WindowsScreenCaptureManager extends ScreenCaptureManager {
 		if(process == null)
 			return; // Already closed
 		
+		targetFile.delete();
 	}
 
 	@Override
